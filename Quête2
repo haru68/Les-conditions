@@ -1,0 +1,45 @@
+using System;
+
+namespace Les_boucles
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] moves = new string[32];
+
+            int NumberOfMovements = 0;
+
+
+            for (int i = 0; i < moves.Length; i++)
+            {
+                Console.WriteLine("Enter a movement");
+
+                moves[i] = Convert.ToString(Console.ReadLine());
+                NumberOfMovements += 1;
+
+                if (moves[i] == "done")
+                {
+                    NumberOfMovements -= 1;
+                    break;
+                }
+                
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Enter the number of moves repetition to start dancing: ");
+
+            int NumberOfRepetition = Convert.ToInt32 (Console.ReadLine());
+
+            for (int i =0; i<NumberOfRepetition; i++)
+            {
+                for (int j = 0; j < NumberOfMovements; j++) 
+                {
+                    Console.WriteLine(moves[j]);
+                }
+                Console.WriteLine();
+            }
+
+        }
+    }
+}
