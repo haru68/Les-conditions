@@ -1,0 +1,38 @@
+using System;
+
+namespace LesConditions_Quête1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Veuillez entrer une borne limite minimum: ");
+            int MinLim = Convert.ToInt32 (Console.ReadLine());
+
+            Console.WriteLine("Veuillez entrer une borne limite maximum: ");
+            int MaxLim = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Veuillez entrer un nombre test ");
+            int TestNumber = Convert.ToInt32(Console.ReadLine());
+
+            if (TestNumber>MaxLim)
+            {
+                Console.WriteLine("Vous avez entrez le nombre " + TestNumber + " qui est en dehors de l'intervalle saisi.");
+                TestNumber = MaxLim;
+                Console.WriteLine("Intégrale maximum validée: " + MaxLim);
+            }
+            else if (TestNumber < MinLim)
+            {
+                Console.WriteLine("Vous avez entrez le nombre " + TestNumber + " qui est en dehors de l'intervalle saisi.");
+                TestNumber = MinLim;
+                Console.WriteLine("Intégrale minimum validée: " + MinLim);
+            }
+            else
+            {
+                Console.WriteLine("Vous avez saisi l'entier: " + TestNumber);
+            }
+
+
+        }
+    }
+}
